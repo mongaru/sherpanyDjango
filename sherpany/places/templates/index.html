@@ -1,0 +1,74 @@
+<html>
+<head>
+  {% load static %}
+
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <script src="https://maps.googleapis.com/maps/api/js" async defer></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="{% static 'places.js' %}"></script>
+
+  <style>
+    body {
+      padding-top: 50px;
+    }
+  </style>
+
+</head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Sherpany</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">James Limousin</a></li>
+            <li><a href="https://github.com/mongaru/sherpanyDjango">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/teddy-limousin-85995612/">LinkedIn</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="javascript:;" id="clearAll">Clean Data</a></li>
+          </ul>
+          
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+      <div id="portoMap" style="width: 100%; height: 100%;"></div>
+
+      <table class="table table-striped" id="portoTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Latitude</th>
+              <th>Longitude</th>
+              <th>Address</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row">1</td>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+          </tbody>
+        </table>
+
+    </div> <!-- /container -->
+    </body>
+</html>
